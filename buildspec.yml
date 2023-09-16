@@ -4,7 +4,8 @@ phases:
   pre_build:
     commands:
       - echo Logging in to Amazon ECR...
-      - aws ecr get-login-password --region us-east-1 | docker login --username AWS --password-stdin <public.ecr.aws/y1w7a2c8/docker-compose>.dkr.ecr.us-east-1.amazonaws.com
+      aws ecr get-login-password --region us-east-1 | docker login --username AWS --password-stdin public.ecr.aws/y1w7a2c8/docker-compose
+
   build:
     commands:
       - echo Build started on `date`
